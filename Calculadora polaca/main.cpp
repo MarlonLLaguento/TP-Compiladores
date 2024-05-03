@@ -4,7 +4,7 @@
 #include <iostream>
 
 int main(int argc, const char* argv[]) {
-    std::string input("4 5 + 3 *");
+    std::string input("4 5 +");
     antlr4::ANTLRInputStream inputStream(input);
     Lexer lexer(&inputStream);
     antlr4::CommonTokenStream tokens(&lexer);
