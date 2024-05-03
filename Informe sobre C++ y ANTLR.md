@@ -6,7 +6,7 @@ El siguiente código en C++ es un ejemplo de un evaluador de expresiones en nota
 
 ### Clases y Funciones
 
-- `EvalVisitor`: Esta clase se deriva de `PolishNotationCalculatorBaseVisitor` y proporciona la implementación de las funciones de visita para las operaciones binarias y enteros.
+- `EvalVisitor`: Esta clase se deriva de `Polaca` y proporciona la implementación de las funciones de visita para las operaciones binarias y enteros.
 - `main`: La función principal inicia el proceso de análisis sintáctico utilizando ANTLR. Toma una cadena de entrada que contiene una expresión en notación polaca inversa, analiza la expresión y la evalúa utilizando el visitante definido.
 
 ### Ejecución

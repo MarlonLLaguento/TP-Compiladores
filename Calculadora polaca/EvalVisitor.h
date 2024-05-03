@@ -1,8 +1,8 @@
-#include "generated/PolishNotationCalculatorBaseVisitor.h"
+#include "generated/Polaca.h"
 
-class EvalVisitor : public PolishNotationCalculatorBaseVisitor {
+class EvalVisitor : public Polaca {
 public:
-    virtual antlrcpp::Any visitBinaryOp(PolishNotationCalculatorParser::BinaryOpContext *ctx) override {
+    virtual antlrcpp::Any visitBinaryOp(Polaca::BinaryOpContext *ctx) override {
         int left = visit(ctx->expr(0));  // Visit left expression
         int right = visit(ctx->expr(1)); // Visit right expression
         if (ctx->op()->getText() == "+") return left + right;
@@ -12,7 +12,7 @@ public:
         return 0;
     }
 
-    virtual antlrcpp::Any visitInt(PolishNotationCalculatorParser::IntContext *ctx) override {
+    virtual antlrcpp::Any visitInt(Polaca::IntContext *ctx) override {
         return std::stoi(ctx->getText());
     }
 };
